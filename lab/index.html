@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Navbar -->
+    <header class="bg-white shadow-md fixed top-0 left-0 w-full z-10">
+        <div class="container mx-auto flex justify-between items-center p-5">
+            <a href="#" class="text-2xl font-bold text-gray-800">My Blog</a>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-toggle" class="lg:hidden text-gray-800 text-2xl focus:outline-none">
+                ☰
+            </button>
+
+            <!-- Navigation -->
+            <nav>
+                <ul id="menu" class="hidden lg:flex space-x-6 font-medium text-gray-700">
+                    <li><a href="#" class="hover:text-blue-500 transition">Home</a></li>
+                    <li><a href="#" class="hover:text-blue-500 transition">About</a></li>
+                    <li><a href="#" class="hover:text-blue-500 transition">Blog</a></li>
+                    <li><a href="#" class="hover:text-blue-500 transition">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden bg-gray-200 p-4 lg:hidden">
+            <ul class="text-gray-800 text-center space-y-3">
+                <li><a href="#" class="block p-2 hover:bg-gray-300 rounded">Home</a></li>
+                <li><a href="#" class="block p-2 hover:bg-gray-300 rounded">About</a></li>
+                <li><a href="#" class="block p-2 hover:bg-gray-300 rounded">Blog</a></li>
+                <li><a href="#" class="block p-2 hover:bg-gray-300 rounded">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="mt-20 text-center py-12 bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+        <div class="container mx-auto">
+            <h1 class="text-4xl font-bold">Welcome to My Blog</h1>
+            <p class="text-lg mt-2 font-light">Sharing insights, ideas, and experiences</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Blog Posts -->
+        <section class="md:col-span-2">
+            <article class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                <h2 class="text-2xl font-semibold mb-3">First Blog Post</h2>
+                <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum, sem et bibendum consectetur, nulla dolor malesuada velit.</p>
+                <img src="images/blog-image.jpg" alt="An example blog image" class="mt-4 rounded-lg shadow-md">
+            </article>
+
+           
+        </section>
+
+        <!-- Sidebar -->
+        <aside class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-3">About Me</h3>
+            <p class="text-gray-600">I'm a web developer passionate about front-end design and blogging. Follow along as I share my journey.</p>
+        </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center p-4 mt-12">
+        <p>&copy; 2024 My Personal Blog. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
